@@ -30,7 +30,7 @@ We download and unzip all CSV files. More download options can be found under th
 
 ## Data Preprocessing instructions
 
-After download, we must build the benchmark dataset for the decompensation prediction task. We follow the directions as set forth by https://github.com/YerevaNN/mimic3-benchmarks/. This repository was copied into the ```mimic4extract``` folder of the current repository.
+After download, we must build the benchmark dataset for the decompensation prediction task. We follow the directions as set forth by https://github.com/YerevaNN/mimic3-benchmarks/.
 
 For reference, we give the approximate times to build the benchmark on our local machine:
 * Downloading data: few minutes
