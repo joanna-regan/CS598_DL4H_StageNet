@@ -65,6 +65,8 @@ Additional hyperparameters can also be specified such as ```--batch_size <intege
 
 For each of the training scripts, evaluation results on test data will be output after training completes.
 
+We also included 3 Google Colab notebooks in this repository that can be used to step through the different training python scripts.
+
 ## Pretrained models and Fast Evaluation
 
 Pretrained models can be found in this repository under ```./saved_weights```. This subdirectory contains:
@@ -89,5 +91,18 @@ For the second ablation model StageNet-II:
 
 ## Results
 
+|                        |          | AUPRC |        |          | AUROC |        |          | min(Re,P+) |        |
+|------------------------|:--------:|-------|--------|:--------:|-------|--------|:--------:|------------|--------|
+|                        | Original | Full  | Subset | Original | Full  | Subset | Original | Full       | Subset |
+| Baseline1: ON-LSTM     | 0.304    | ---   | ---    | 0.895    | ---   | ---    | 0.343    | ---        | ---    |
+| Baseline2: Health-LSTM | 0.291    | ---   | ---    | 0.897    | ---   | ---    | 0.325    | ---        | ---    |
+| Pre-Trained StageNet   | 0.323    | 0.341 | 0.289  | 0.903    | 0.909 | 0.890  | 0.372    | 0.390      | 0.347  |
+| Reproduced StageNet    | 0.323    | 0.228 | 0.206  | 0.903    | 0.874 | 0.842  | 0.372    | 0.292      | 0.280  |
+| Ablation1: StageNet-I  | 0.313    | 0.226 | 0.209  | 0.899    | 0.850 | 0.838  | 0.360    | 0.315      | 0.279  |
+| Ablation2: StageNet-II | 0.311    | 0.220 | 0.211  | 0.897    | 0.872 | 0.844  | 0.358    | 0.287      | 0.280  |
 
+Performance comparison of baseline models against pre-trained StageNet model, reproduced StageNet model, and two different ablations StageNet-I and StageNet-II. The Pre-trained model was provided by the original authors, while the remaining models were trained as part of the current reproducibility study.
 
+For the Pre-Trained StageNet model, the authors provided a saved model in their github. We load this model, and report the performance when evaluating using the full test dataset (n=11,221) and when using the small subset (n=1,389).
+
+For the remaining models (Reproduced StageNet, StageNet-I, and StageNet-II), we train a small subset of data (training set size = 5,000 and validation set size = 556) for 50 epochs using Google Colab with GPU A100 and high-RAM enabled. The best of each model is saved. The model is then evaluated using the full test dataset (n=11,221) and using the small subset (n=1,389). 
