@@ -8,7 +8,7 @@ We reproduce results conducted by the original authors of [StageNet: Stage-Aware
 
 In this reproducibility study, we leverage the author's original code where available. Their repository can be found at: https://github.com/v1xerunt/StageNet.
 
-Please be sure to reference the original paper:
+Please be sure to cite the original paper:
 ```
 Junyi Gao, Cao Xiao, Yasha Wang, Wen Tang, Lucas M. Glass, Jimeng Sun. 2020. 
 StageNet: Stage-Aware Neural Networks for Health Risk Prediction. 
