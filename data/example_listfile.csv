@@ -1,0 +1,5 @@
+stay,period_length,stay_id,y_true
+16671204_episode1_timeseries.csv,10,38064792,0
+14538785_episode1_timeseries.csv,19,37205305,0
+15552902_episode1_timeseries.csv,304,37906213,0
+11267564_episode1_timeseries.csv,484,34685399,0
