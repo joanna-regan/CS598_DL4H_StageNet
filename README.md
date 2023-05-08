@@ -80,15 +80,19 @@ Pre-trained models should be copied from that location and saved in the current 
 To evaluate these models with the test data, we can run the respective training scripts with ```test_mode=1``` as following:
 
 For the original StageNet:
+
 ```$ python train.py --test_mode=1 --data_path='./data/' --file_name='StageNet'```
 
 For the reproduced StageNet:
+
 ```$ python train.py --test_mode=1 --data_path='./data/' --file_name ='trained_model'```
 
 For the first ablation model StageNet-I:
+
 ```$ python train_ablation1.py --test_mode=1 --data_path='./data/' ```
 
 For the second ablation model StageNet-II:
+
 ```$ python train_ablation2.py --test_mode=1 --data_path='./data/' ```
 
 ## Results
