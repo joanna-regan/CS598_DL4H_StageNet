@@ -69,7 +69,9 @@ We also included 3 Google Colab notebooks in this repository that can be used to
 
 ## Pretrained models and Fast Evaluation
 
-Pretrained models can be found in this repository under ```./saved_weights```. This subdirectory contains:
+Pretrained models can be found at the UofI box here: https://uofi.box.com/s/arp8eorr40fs31kat3nsgelvyu1hrs20
+
+Pre-trained models should be copied from that location and saved in the current repository under ```./saved_weights```. The available models include:
 * ```StageNet```: pre-trained StageNet model provided by the original authors
 * ```trained_model```: best pre-trained StageNet model created for the current reproducibility study (trained on subsample of data)
 * ```trained_model_ablation1```: best pre-trained StageNet-I model created as an ablation for the current reproducibility study (trained on subsample of data)
@@ -81,7 +83,7 @@ For the original StageNet:
 ```$ python train.py --test_mode=1 --data_path='./data/' --file_name='StageNet'```
 
 For the reproduced StageNet:
-```$ python train.py --test_mode=1 --data_path='./data/' ```
+```$ python train.py --test_mode=1 --data_path='./data/' --file_name ='trained_model'```
 
 For the first ablation model StageNet-I:
 ```$ python train_ablation1.py --test_mode=1 --data_path='./data/' ```
